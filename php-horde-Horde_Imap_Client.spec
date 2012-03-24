@@ -1,14 +1,16 @@
+# TODO
+# - system locale dir
 %define		status		stable
 %define		pearname	Horde_Imap_Client
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Horde IMAP abstraction interface
 Name:		php-horde-Horde_Imap_Client
-Version:	1.2.0
+Version:	1.5.1
 Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.horde.org/get/%{pearname}-%{version}.tgz
-# Source0-md5:	711c3299810385f5a000bec85b0d043f
+# Source0-md5:	13036502eb66cf700b054e30645c55f4
 URL:		https://github.com/horde/horde/tree/master/framework/Imap_Client/
 BuildRequires:	php-channel(pear.horde.org)
 BuildRequires:	php-packagexml2cl
@@ -51,6 +53,9 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
 
+%{__rm} $RPM_BUILD_ROOT%{php_pear_dir}/data/Horde_Imap_Client/locale/%{pearname}.pot
+%{__rm} $RPM_BUILD_ROOT%{php_pear_dir}/data/Horde_Imap_Client/locale/*/LC_MESSAGES/%{pearname}.po
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -65,3 +70,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{php_pear_dir}/Horde/Imap
 %{php_pear_dir}/Horde/Imap/Client.php
 %{php_pear_dir}/Horde/Imap/Client
+%{php_pear_dir}/data/Horde_Imap_Client
