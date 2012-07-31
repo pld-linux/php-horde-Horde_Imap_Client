@@ -5,12 +5,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Horde IMAP abstraction interface
 Name:		php-horde-Horde_Imap_Client
-Version:	1.5.1
+Version:	1.5.7
 Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.horde.org/get/%{pearname}-%{version}.tgz
-# Source0-md5:	13036502eb66cf700b054e30645c55f4
+# Source0-md5:	5a42795eae82bdb48af2a4a77fa7f8a3
 URL:		https://github.com/horde/horde/tree/master/framework/Imap_Client/
 BuildRequires:	php-channel(pear.horde.org)
 BuildRequires:	php-packagexml2cl
