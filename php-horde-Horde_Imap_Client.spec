@@ -5,12 +5,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Horde IMAP abstraction interface
 Name:		php-horde-Horde_Imap_Client
-Version:	1.5.7
-Release:	2
+Version:	1.5.10
+Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.horde.org/get/%{pearname}-%{version}.tgz
-# Source0-md5:	5a42795eae82bdb48af2a4a77fa7f8a3
+# Source0-md5:	f26f23111ab0f42bcb17afc098300893
 URL:		https://github.com/horde/horde/tree/master/framework/Imap_Client/
 BuildRequires:	php-channel(pear.horde.org)
 BuildRequires:	php-packagexml2cl
@@ -32,9 +32,6 @@ Suggests:	php-mbstring
 Suggests:	php-pear-Auth_SASL
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-# exclude optional dependencies
-%define		_noautoreq	 pear(Horde/Cache.*) pear(Horde/Secret.*) pear(Horde/Stream/Filter.*) pear(Auth/SASL.*)
 
 %description
 This package provides an abstracted API interface to various IMAP4rev1
