@@ -2,7 +2,6 @@
 # - system locale dir
 %define		status		stable
 %define		pearname	Horde_Imap_Client
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Horde IMAP abstraction interface
 Name:		php-horde-Horde_Imap_Client
 Version:	1.5.10
